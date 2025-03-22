@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SVG Hover Animation</title>
+<style>
+:root {
+  --bunnyFurColor: #fffce3;
+  --bunnyEyeColor: #2b2b2b;
+  --bunnyNoseColor: #da8cd6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+	background-color: #d0d0d0;
+} 
+
+#bunnyHead {
+    fill: var(--bunnyFurColor);
+}
+
+#bunnyEarLeft {
+	fill: var(--bunnyFurColor);
+	transform-origin: center;
+	transition: transform 0.8s ease;
+}
+#myBunny:hover #bunnyEarLeft {
+	transform: translate(40px, 10px) rotate(0deg);
+}
+
+#bunnyEarRight {
+	fill: var(--bunnyFurColor);
+	transform-origin: center;
+	transition: transform 0.8s ease;
+}
+#myBunny:hover #bunnyEarRight {
+	transform: translate(40px, 30px) rotate(-45deg);
+}
+
+
+#bunnyEyeRight {
+	fill: var(--bunnyEyeColor);
+    transition: transform 0.8s ease; 
+}
+#myBunny:hover #bunnyEyeRight {
+    transform: translate(-35px, 15px);
+}
+
+#bunnyEyeLeft {
+	fill: var(--bunnyEyeColor);
+    transition: transform 0.8s ease; 
+}
+#myBunny:hover #bunnyEyeLeft {
+    transform: translate(70px, 0px);
+}
+
+#bunnySnozzle {
+	fill: var(--bunnyFurColor);
+	transition: transform 0.8s ease; 
+}
+#myBunny:hover #bunnySnozzle {
+	fill: var(--bunnyFurColor);
+}
+
+#bunnyNoseBack {
+	fill: var(--bunnyNoseColor);
+	transition: transform 0.8s ease; 
+}
+#myBunny:hover #bunnyNoseBack {
+    transform: translate(10px, 3px);
+}
+#bunnyNoseFront {
+	fill: transparent;
+	transition: fill 0.4s ease, transform 0.8s ease; 
+}
+#myBunny:hover #bunnyNoseFront {
+	fill: var(--bunnyNoseColor);
+    transform: translate(10px, 3px);
+}
+
+#bunnyBody {
+	fill: var(--bunnyFurColor);
+}
+
+#bunnyTail {
+	fill: var(--bunnyFurColor);
+}
+
+.scene-container {
+	display: flex;
+	justify-content: center; 
+	align-items: center;  
+	flex-direction: column;
+	width: 100vw;       
+	height: 100vh;   
+	min-height: fit-content
+     
+}
+
+h1 {
+	font-size: 60px;
+	margin-bottom: 30px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--bunnyEyeColor);
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+<div class="scene-container">
+	<h1>Duan Jacobs</h1>
+	<svg id="myBunny" width="216" height="372" >  
+		<path id="bunnyEarLeft" fill-rule="evenodd" clip-rule="evenodd" d="M9.34634 33.6242C13.7957 24.4265 24.8587 20.5773 34.0563 25.0266C53.793 34.5741 73.5924 44.7742 89.9317 61.3901C106.71 78.4526 118.664 100.964 125.948 133.385L89.8484 141.495C83.7318 114.272 74.4926 98.4603 63.55 87.3325C52.1682 75.7579 37.7189 67.9002 17.9439 58.3341C8.74628 53.8848 4.89702 42.8218 9.34634 33.6242Z" />
+		<path id="bunnyEarRight" fill-rule="evenodd" clip-rule="evenodd" d="M90.76 5.12822C98.4213 -1.63174 110.112 -0.901072 116.872 6.76022C122.734 13.4043 127.974 23.7882 132.331 33.893C136.959 44.6235 141.517 57.2811 145.53 70.097C153.312 94.9491 160 123.432 160 140.5H123C123 129.568 117.938 105.801 110.22 81.1535C106.483 69.2193 102.354 57.8144 98.3561 48.5449C94.0888 38.6498 90.7655 33.0961 89.128 31.2402C82.368 23.5789 83.0987 11.8882 90.76 5.12822Z" />
+		<circle id="bunnyEyeLeft" cx="108.5" cy="150.5" r="10.5"/>
+		<circle id="bunnyHead" cx="130.5" cy="178.5" r="58.5" />
+		<circle id="bunnyNoseBack" cx="193.5" cy="172.5" r="10.5" />
+		<circle id="bunnySnozzle" cx="168" cy="189" r="38" />
+		<circle id="bunnyNoseFront" cx="193.5" cy="172.5" r="10.5" />
+		<circle id="bunnyEyeRight" cx="178.5" cy="150.5" r="10.5"/>
+		<circle id="bunnyBody" cx="91.5" cy="280.5" r="91.5"/>
+		<circle id="bunnyTail" cx="45" cy="330" r="40"/>
+	</svg>
+</div>
+
+
+</body>
+</html>
